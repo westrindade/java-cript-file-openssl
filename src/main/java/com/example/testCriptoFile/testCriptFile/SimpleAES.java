@@ -11,7 +11,6 @@ public class SimpleAES {
     private static final int KEY_SIZE = 32;
 
     public static void encryptFile(String inputFile, String outputFile, byte[] key) throws Exception {
-        // Verifica se a chave fornecida tem o tamanho correto
         if (key.length != KEY_SIZE) {
             throw new IllegalArgumentException("A chave deve ter 32 bytes para AES-256.");
         }
@@ -28,7 +27,6 @@ public class SimpleAES {
     }
 
     public static void decryptFile(String inputFile, String outputFile, byte[] key) throws Exception {
-        // Verifica se a chave fornecida tem o tamanho correto
         if (key.length != KEY_SIZE) {
             throw new IllegalArgumentException("A chave deve ter 32 bytes para AES-256.");
         }
